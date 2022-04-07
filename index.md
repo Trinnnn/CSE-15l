@@ -14,7 +14,7 @@ This is a list of stories
 * I almost lost my essay because my computer ran out of battery. But, pages have autosave i guess. So, I didn’t completely lose it. 
 * My most stressful quater is when I took CS with human physiology.
 
-![Image](https://images.hgmsites.net/lrg/2022-toyota-rav4-hybrid-xse-awd-natl-angular-front-exterior-view_100828884_l.jpg)
+![Image](https://snowbrains.com/wp-content/uploads/2020/12/IMG_9795-min-scaled.jpg)
 
 1. CSE 15l
 1. CSE 12
