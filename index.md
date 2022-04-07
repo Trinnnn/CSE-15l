@@ -8,9 +8,9 @@ Hi - *To winter*
 
 [Link to CSE 15L Webpage](https://trinnnn.github.io/CSE-15l/)
 
-This is a list of things
-* 1
-* 2
+This is a list of stories
+* I almost lost my essay because my computer ran out of battery. But, pages have autosave i guess. So, I didn’t completely lose it. 
+* My most stressful quater is when I took CS with human physiology.
 
 1. CSE 15l
 1. CSE 12
