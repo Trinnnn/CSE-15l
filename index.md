@@ -4,7 +4,7 @@
 
 Hello **CSE 15L** Student!
 
-Hi - *To winter*
+Hi - *To winter and shield*
 
 [Link to CSE 15L Webpage](https://trinnnn.github.io/CSE-15l/)
 
@@ -16,8 +16,9 @@ This is a list of stories
 
 ![Image](https://snowbrains.com/wp-content/uploads/2020/12/IMG_9795-min-scaled.jpg)
 
-1. CSE 15l
-1. CSE 12
+My recent favorite:
+1. Skiing (but I can't go cus I don't have the time...)
+1. Getting Toyota RAV4
 
 ```
 # code block
