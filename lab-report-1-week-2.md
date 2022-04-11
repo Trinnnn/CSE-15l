@@ -58,19 +58,31 @@ cat /home/linux/ieng6/cs15lsp22/public/hello.txt
 // cat is a command that create or view a file. But it will be permission denied because you are not allow to create or view a file at the another person's directory.
 
 ```
+- This is our sample result after running the command **ls -lat**.
+![image](3.png)
+
 Note: To logout of the remote server in the terminal, you can: 
-- Ctrl-D
-- Run the command exit
+1. Ctrl-D
+1. Run the command exit
+
+---
 
 **4. Moving Files with scp**
-- Now we will use a command called scp to copy a file from your computer to a remote computer. I will use a file called WhereAmI.java to demonstrate this.
-- You should run this command 
+- Now, we will use a command called scp to copy a file from your computer to a remote computer. I will use a file called WhereAmI.java to demonstrate this.
+- You should run this command after replacing the file name and zz with your file name and the letters in your course-specific account. You will need to input your password in order to login after running the command. 
 ```
 //scp <File Name>.java cs15lsp22zz@ieng6.ucsd.edu:~/
 scp WhereAmI.java cs15lsp22aoc@ieng6.ucsd.edu:~/
 ```
+- After running the command, you should see the file appearing in your remote computer's home directory when you run the command ls. You should also be able to run the program file after compiling it. Our sample result is down below!
+![image](4.png)
+
+---
 
 **5. Setting an SSH Key**
+
+
+![image](5.png)
 
 
 **6. Optimizing Remote Running**
@@ -78,4 +90,3 @@ scp WhereAmI.java cs15lsp22aoc@ieng6.ucsd.edu:~/
 
 
 
-![image](SSH.png)
