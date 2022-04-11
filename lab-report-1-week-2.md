@@ -7,14 +7,14 @@ NOTE: This tutorial is for Mac IOS system. Windows users have an extra step that
 
 ---
 
-1. **Installing VScode**
+**1. Installing VScode**
 
 ![image](1.png)
 - Before connecting your local computer to the server, you need to download VScode. You need to go to this website ([Link to VScode](https://code.visualstudio.com/)) and download VScode to your computer according to your system. 
 
 ---
 
-1. **Remotely Connecting**
+**2. Remotely Connecting**
  
 - The first step is to open up the terminal and enter this command. Remember to replace zz with the letters in your course-specific account. 
 
@@ -38,17 +38,42 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 ---
 
-1. **Trying Some Commands**
+**3. Trying Some Commands**
+- Try to run the following commands on both your computer and the remote computer. I marked their function next to the commands.
+```
+cd ~ // change back to home directory
+
+cd // change directory
+
+pwd // output the full path name of your current directory
+
+ls -lat // list all files including entries starting with ‘.’ in the long format along with the times when they were modified.
+
+ls -a // list all the existing files including entries starting with ‘.’
+
+cp /home/linux/ieng6/cs15lsp22/public/hello.txt ~/ 
+//cp is a command that copy the file. But it will be permission denied since you are not allow to access code created by other people
+
+cat /home/linux/ieng6/cs15lsp22/public/hello.txt 
+// cat is a command that create or view a file. But it will be permission denied because you are not allow to create or view a file at the another person's directory.
+
+```
+Note: To logout of the remote server in the terminal, you can: 
+- Ctrl-D
+- Run the command exit
+
+**4. Moving Files with scp**
+- Now we will use a command called scp to copy a file from your computer to a remote computer. I will use a file called WhereAmI.java to demonstrate this.
+- You should run this command 
+```
+//scp <File Name>.java cs15lsp22zz@ieng6.ucsd.edu:~/
+scp WhereAmI.java cs15lsp22aoc@ieng6.ucsd.edu:~/
+```
+
+**5. Setting an SSH Key**
 
 
-
-1. **Moving Files with scp**
-
-
-1. **Setting an SSH Key**
-
-
-1. **Optimizing Remote Running**
+**6. Optimizing Remote Running**
 
 
 
