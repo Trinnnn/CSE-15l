@@ -40,6 +40,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 **3. Trying Some Commands**
 - Try to run the following commands on both your computer and the remote computer. I marked their function next to the commands.
+
 ```
 cd ~ // change back to home directory
 
@@ -56,8 +57,8 @@ cp /home/linux/ieng6/cs15lsp22/public/hello.txt ~/
 
 cat /home/linux/ieng6/cs15lsp22/public/hello.txt 
 // cat is a command that create or view a file. But it will be permission denied because you are not allow to create or view a file at the another person's directory.
-
 ```
+
 - This is our sample result after running the command **ls -lat**.
 ![image](3.png)
 
