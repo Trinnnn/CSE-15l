@@ -82,11 +82,11 @@ scp WhereAmI.java cs15lsp22aoc@ieng6.ucsd.edu:~/
 **5. Setting an SSH Key**
 
 
-![image](5.png)
 
 
 **6. Optimizing Remote Running**
 
+![image](6.png)
 
 
 
