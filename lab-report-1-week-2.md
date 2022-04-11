@@ -116,7 +116,7 @@ The key's randomart image is:
 |             ..  |
 +----[SHA256]-----+
 ```
-2. Next, we need to copy the public key to the .ssh directory that is on your remote computer. In order to do so, you first need to login to the server. Then, you need to create a directory called **.ssh** on to server by running the following command. 
+2. Next, we need to copy the public key to the .ssh directory that is on your remote computer. In order to do so, you first need to login to the server. Then, you need to create a directory called **.ssh** on to server by running the following command.  
 ```
 $ ssh cs15lsp22zz@ieng6.ucsd.edu // login to server
 <Enter Password>
