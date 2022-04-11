@@ -135,6 +135,7 @@ $ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/autho
 
 **6. Optimizing Remote Running**
 - Here is a few command that will make your remote running more efficient!
+
 ```
 1. $ ssh cs15lsp22zz@ieng6.ucsd.edu "ls"
 // Write a command in quotes at the end of an ssh command will directly run it on the remote server and return the result to you.
@@ -143,6 +144,7 @@ $ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/autho
 // use semicolons to run multiple commands on the same line
 ```
 - A combination of these 2 command could be something like the following. You can use my result of running the command as a reference.
+
 ```
 $ ssh cs15lsp22zz@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"
 ```
