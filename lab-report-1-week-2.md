@@ -86,7 +86,7 @@ scp WhereAmI.java cs15lsp22aoc@ieng6.ucsd.edu:~/
 **5. Setting an SSH Key**
 - Now, we will learn a great way to allow more efficient login process: *Setting up an SSH key*. SSH key works by a program called ssh-keygen. This program create a pair of files called the public key and private key. So, SSH command can use this pair of files in place of your password. After setting it up, you don't need to enter the password to login anymore!   
 
-1. First, you need to create the SSH key file on your local computer by running the command **ssh-keygen**. The SSH key file are stored in the .ssh directory on your computer.
+- First, you need to create the SSH key file on your local computer by running the command **ssh-keygen**. The SSH key file are stored in the .ssh directory on your computer.
 
 ```
 $ ssh-keygen
@@ -116,7 +116,8 @@ The key's randomart image is:
 |             ..  |
 +----[SHA256]-----+
 ```
-2. Next, we need to copy the public key to the .ssh directory that is on your remote computer. In order to do so, you first need to login to the server. Then, you need to create a directory called **.ssh** on to server by running the following command.  
+
+- Next, we need to copy the public key to the .ssh directory that is on your remote computer. In order to do so, you first need to login to the server. Then, you need to create a directory called **.ssh** on to server by running the following command.  
 
 ```
 $ ssh cs15lsp22zz@ieng6.ucsd.edu // login to server
@@ -124,7 +125,7 @@ $ ssh cs15lsp22zz@ieng6.ucsd.edu // login to server
 $ mkdir .ssh // create the .ssh directory
 ```
 
-3. After that, you need to logout of the server and run the following command on your computer. You also need to enter your password for the last time. 
+- After that, you need to logout of the server and run the following command on your computer. You also need to enter your password for the last time. 
 
 ```
 $ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/authorized_keys
