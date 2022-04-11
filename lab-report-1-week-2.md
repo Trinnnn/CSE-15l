@@ -146,10 +146,9 @@ $ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/autho
 ```
 $ ssh cs15lsp22zz@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"
 ```
+
 ![image](6.png)
 
 ---
 
 **This is the end of the tutorial! Good Job for making it to the end!**
-
-
