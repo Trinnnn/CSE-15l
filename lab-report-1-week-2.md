@@ -117,16 +117,20 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 2. Next, we need to copy the public key to the .ssh directory that is on your remote computer. In order to do so, you first need to login to the server. Then, you need to create a directory called **.ssh** on to server by running the following command.  
+
 ```
 $ ssh cs15lsp22zz@ieng6.ucsd.edu // login to server
 <Enter Password>
 $ mkdir .ssh // create the .ssh directory
 ```
+
 3. After that, you need to logout of the server and run the following command on your computer. You also need to enter your password for the last time. 
+
 ```
 $ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/authorized_keys
 //Use your username for the command!
 ```
+
 - Now, you should be able to login to the remote computer without password!
 
 ![image](5.png)
@@ -143,6 +147,7 @@ $ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/autho
 2. javac WhereAmI.java; java WhereAmI
 // use semicolons to run multiple commands on the same line
 ```
+
 - A combination of these 2 command could be something like the following. You can use my result of running the command as a reference.
 
 ```
