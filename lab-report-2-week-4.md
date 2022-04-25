@@ -5,15 +5,24 @@
 
 ---
 
-**1. Infinite Loop **
+**1. Infinite Loop**
 
-![image](1.png)
+![image](8.png)
 
-- Before connecting your local computer to the server, you need to download VScode. You need to go to this website ([Link to VScode](https://code.visualstudio.com/)) and download VScode to your computer according to your system. 
+- The image above is the code change in order to fix the infinite loop when encountering this [failure-inducing input](https://github.com/Trinnnn/markdown-parser/blob/main/test-file2.md?plain=1) regarding a different formatted link.
+
+
+
+- The 
+
 
 ---
 
-**2. Image Link Inclusion **
+**2. Image Link Inclusion**
+
+![image](10.png)
+![image](9.png)
+
  
 - The first step is to open up the terminal and enter this command. Remember to replace zz with the letters in your course-specific account. 
 
@@ -33,11 +42,12 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 - This is the result when you successfully connected to the remote computer / server! You can use it as a reference. 
 
-![image](2.png)
-
 ---
 
-**3. Index out of bound with Wrong Content Inclusion **
+**3. Index out of bound with Wrong Content Inclusion**
+
+![image](7.png)
+
 - Try to run the following commands on both your computer and the remote computer. I marked their function next to the commands.
 
 ```
@@ -59,8 +69,6 @@ cat /home/linux/ieng6/cs15lsp22/public/hello.txt
 ```
 
 - This is our sample result after running the command **ls -lat**.
-
-![image](3.png)
 
 Note: To logout of the remote server in the terminal, you can: 
 1. Ctrl-D
