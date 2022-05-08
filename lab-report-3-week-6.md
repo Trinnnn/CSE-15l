@@ -1,49 +1,56 @@
 # CSE 15L Spring 2022: Lab Report 3
-## Bug, Symptom, and Failure-inducing Input
 
-**Hello CSE 15L students!** Today I am going to depict the relationship between bug, symptom, and failure-inducing input. 
+**Hello CSE 15L students!** Today I am going to demonstrate streamline ssh sonfiguration, setup Github access from ieng6, and copy whole directories with scp-r.
 
 ---
 
-**1. Infinite Loop**
-- The image below is the code change in order to fix the infinite loop when encountering this [failure-inducing input](https://github.com/Trinnnn/markdown-parser/blob/main/test-file2.md?plain=1) regarding a different formatted link.
+**1. Streamline ssh configuration**
+> By streamlining the ssh configuration, the user is able to login to the ssh account more efficiently. In order to set it up, you first need to create a new file using the touch command and store the file at the .ssh directory. Then, use the nano command to edit config and add the following content in the image. This include the host, host name, and the user name. After that, you should be able to streamline ssh configuration by running "ssh ieng6". 
 
-![image](8.png)
+![image](Lab3_1.3.png)
 
-- The following image showed the symptom of that failure-inducing input. Here the program enters a state of infinite loop since the while loop doesn't break when it cannot find another normally formatted link in the file. 
+- config file content
 
-![image](11.png)
+![image](Lab3_1.1.png)
+![image](Lab3_1.2.png)
 
-> The bug here is that the while loop did not cover the cases where the file does not end with a link. For the infinite loop, multiple failure-inducing inputs can lead to the symptom such as a extra line at the end. As long as the file does not end with a link, the symptom will persist. Also, the bug will appear again if an input manage to not trigger the if statement after all the link are parsed. 
+- Using nano command to edit the file
+
+![image](Lab3_1.4.png)
+
+- Streamlining ssh configuration after setup
+
 ---
 
-**2. Image Address Inclusion**
-- The image below is the code change in order to fix the image address inclusion which is a wrong output when encountering this [failure-inducing input](https://github.com/Trinnnn/markdown-parser/blob/main/test-file3.md?plain=1).
+**2. Setup Github access from ieng6**
+> Setting up Github access from ieng6 allow users to edit, add, commit, push, and pull changes at the remote server: ieng6. First, you need to generate the public and private key using the ssh-keygen command. Then, you should add the public key you made to Github at the setting page. After that, you should be able push changes of repository to Github from ieng6 server. 
 
-![image](10.png)
-![image](9.png)
+![image](Lab3_2.1.png)
 
- 
-- The following image showed the symptom of that failure-inducing input. Here the program parsed an image address as a link and added it to the output arraylist because the image's markdown format is similar to that of the link.
+- Github Key Setup
 
-![image](ImageLink.png)
+![image](Lab3_2.2.png)
 
-> The failure-inducing input is the image address, causing the program to produce the wrong output. It triggers the bug in the program which is the way we parse anything that has the same format as the link unconditionally. There are more than one failure-inducing inputs to trigger the bug. As long as the positioning of bracket and parenthesis is similar to the link's markdown format, the bug will be triggered. After the bug is triggered, it produces the wrong output which is the symptom for us to see. 
+- ssh public and private keys (id_rsa.pub & id_rsa)
+
+![image](Lab3_2.3.png)
+
+- Pushing changes of repository from ieng6 server to Github
+
 ---
 
-**3. Index out of bound with Wrong Content Inclusion**
-- The image below is the code change in order to fix the index out of bound and wrong content inclusion (including a string that is formatted like a link) when encountering this [failure-inducing input](https://github.com/Trinnnn/markdown-parser/blob/main/test-file1.8.md?plain=1).
+**3. Copy whole directories with scp-r**
+> scp -r command enables you to copy the entire repository from your local computer to the remote server: ieng6. First, you should run the scp -r command with your ssh configuration and local repository name just like the following image. Then, you should be able to run the JUnit test in the remote server. You could also combine commands of copying repository and running JUnit test in one line to speed up the process.
 
-![image](7.png)
-![image](12.png)
+![image](Lab3_3.1.png)
 
+- Copying the local repository to remote server using scp -r
 
-The following are the symptoms of the failure-inducing input.
-- Index out of bound for test case 8:
-> The index out of bound is caused by the if statement to fix the bug for image address inclusion. We did not take into consideration that the openBracket's index may be zero in certain cases and minus one would then trigger an error, which is a bug that need to be fixed. The bug and symptom relationship are one to one since specifying the index bound eliminate the bug and the symptom all together. 
+![image](Lab3_3.2.png)
 
-![image](IndexOutofBound.png)
+- Compiling and running JUnit test on the ieng server
 
-- Wrong Output for test case 8 after fixing index out of bound symptom. Here the program parsed a random string as the link since the string has a similar format to the link.
-> The program produces the wrong output here because it did not include a condition that empty bracket before the actual link is not acceptable. This is a bug within the program. Any empty bracket combined with an string with in parenthesis can fool the program to produce the wrong output. Here the wrong output into the arraylist is the symptom. Different bugs and failure-inducing input could lead to the same symptom: wrong output. I am just showing you one example here. 
-![image](WrongOutput.png)
+![image](Lab3_3.3.png)
+![image](Lab3_3.4.png)
+
+- Combining scp and ssh to copy repository and run test in one line
