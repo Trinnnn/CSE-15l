@@ -1,53 +1,54 @@
 # CSE 15L Spring 2022: Lab Report 4
 
-**Hello CSE 15L students!** Today I am going to demonstrate streamline ssh sonfiguration, setup Github access from ieng6, and copy whole directories with scp-r.
+- My markdown-parse Repository: https://github.com/Trinnnn/markdown-parser
+- Week 7 Reviewed markdown-parse repository: https://github.com/cynthia-bao/markdown-parser
 
----
+**Expected Output for Snippet 1**
+-
+```
+[`google.com, google.com, ucsd.edu]
+```
+![image](Snippet_1.png)
 
-**1. Streamline ssh configuration**
-> By streamlining the ssh configuration, the user is able to login to the ssh account more efficiently. In order to set it up, you first need to create a new file using the touch command and store the file at the .ssh directory. Then, use the nano command to edit config and add the following content in the image. This include the host, host name, and the user name. After that, you should be able to streamline ssh configuration by running "ssh ieng6". 
-- config file content
+**Expected Output for Snippet 2**
+-
+```
+[a.com, a.com(()), example.com]
+```
+![image](Snippet_2.png)
 
-![image](Lab3_1.3.png)
+**Expected Output for Snippet 3**
+-
+```
+[https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule]
+```
+![image](Snippet_3.png)
 
-- Using nano command to edit the file
+**Code for Testing Lab 4 markdown Snippets**
+-
+![image](code_MarkdownParse.png)
 
-![image](Lab3_1.1.png)
-![image](Lab3_1.2.png)
+**Test Result for my Implementation**
+-
+- All three test for markdown Snippet 1, 2, and 3 failed.
+![image](My_Implementation.png)
 
-- Streamlining ssh configuration after setup
+**Test Result for the Implementation I Reviewed**
+-
+- All three test for markdown Snippet 1, 2, and 3 failed.
+![image](Reviewed_Implementation.png)
 
-![image](Lab3_1.4.png)
+**Possible Solution for Snippet 1**
+> There is a small code change that will make my program work for snippet. If I add an additional condition to the if statement at line 22 regarding not allowing the link to be parse if a backtick exist before the open bracket. However, this small change does not account for all related cases that use inline code with backticks, because a single backtick before open bracket would not interfere with the link format. A possible small code change that account for this could be a way to search for the occurence of matching backticks within a line of markdown link format. 
 
----
+- Small change in line 22 : 
 
-**2. Setup Github access from ieng6**
-> Setting up Github access from ieng6 allow users to edit, add, commit, push, and pull changes at the remote server: ieng6. First, you need to generate the public and private key using the ssh-keygen command. Then, you should add the public key you made to Github at the setting page. After that, you should be able push changes of repository to Github from ieng6 server. 
-- Github Key Setup
+```
+if (openBracket >= 1 && (markdown.charAt(openBracket - 1) == '!' || markdown.charAt(openBracket - 1) == '`')) {
+```
 
-![image](Lab3_2.1.png)
+**Possible Solution for Snippet 2**
+> There is a possible small code change that will make my program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets. Currently, my program uses indexOf as the method to find the index of close parenthesis starting from open parenthesis. The failed test is due to fact that indexOf return the index of close parenthesis at its first occurrence, starting at the open parenthesis. Therefore, a possible small code change could be a way to search for the last occurence of close parenthesis instead of the first occurence if we make sure that this string is a link format. 
 
-- ssh public and private keys (id_rsa.pub & id_rsa)
-
-![image](Lab3_2.2.png)
-
-- Pushing changes of repository from ieng6 server to Github
-
-![image](Lab3_2.3.png)
-
----
-
-**3. Copy whole directories with scp-r**
-> scp -r command enables you to copy the entire repository from your local computer to the remote server: ieng6. First, you should run the scp -r command with your ssh configuration and local repository name just like the following image. Then, you should be able to run the JUnit test in the remote server. You could also combine commands of copying repository and running JUnit test in one line to speed up the process.
-- Copying the local repository to remote server using scp -r
-
-![image](Lab3_3.1.png)
-
-- Compiling and running JUnit test on the ieng server
-
-![image](Lab3_3.2.png)
-
-- Combining scp and ssh to copy repository and run test in one line
-
-![image](Lab3_3.3.png)
-![image](Lab3_3.4.png)
+**Possible Solution for Snippet 3**
+> I do not think that there is a small code change that  will make my program work for snippet 3 and all related cases that have newlines in brackets and parentheses, because of the various subtle code change that makes a link format have newlines in brackets and parentheses work or fail. Here, we cannot simply search for the combination of parentheses and brackets to parse link into an arraylist. We have to account for the possibility of missing parentheses and brackets while limiting the search for those (to not include the brackets or parentheses from random places). Also, we need a way to not parse the link format with an new line between them. 
