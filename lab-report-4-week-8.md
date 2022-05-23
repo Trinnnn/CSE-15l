@@ -1,4 +1,4 @@
-# CSE 15L Spring 2022: Lab Report 3
+# CSE 15L Spring 2022: Lab Report 4
 
 **Hello CSE 15L students!** Today I am going to demonstrate streamline ssh sonfiguration, setup Github access from ieng6, and copy whole directories with scp-r.
 
