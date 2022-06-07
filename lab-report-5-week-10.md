@@ -26,7 +26,7 @@ Here is the link to the test files:
 
 - For test file 12, lab 9's implementation is right. Test file 12 does not have links, but my implementation still parsed a part of it as a link. Lab 9’s implementation returned an empty array list which is right.
 
-**Fix for My Implementation**
+**Bug for My Implementation:**
 
 ![image](JDB12.png)
 
@@ -47,7 +47,12 @@ Here is the link to the test files:
 
 - For test file 22, my implementation is right. The expected output matches my result of foo being a link. My implementation parsed the link while Lab 9’s implementation outputs an empty array list.
 
-**Fix for Lab 9 Implementation**
+**Bug for Lab 9 Implementation:**
 
+![image](JDB22.png)
+
+![image](Fix22.png)
+
+> From the JDB, you can see at line 75 that the potnetialLink is "/bar\* "ti\*tle"". At the if statement at line 75, lab 9 MarkdownParse is checking if potnetialLink has any spaces or lines. potnetialLink will only be parsed if it does not have any spaces or lines. However, test file 22's link does have a space inside the link. Therefore, the link was not parsed to the returned array list.
 
 ---
